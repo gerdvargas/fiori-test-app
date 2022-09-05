@@ -1,9 +1,9 @@
 //@ts-nocheck
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/mvc/Controller"
     // "sap/m/MessageToast"
     // "sap/ui/model/json/JSONModel"
-    // "DTT/SAPUI5/model/Models",
+    // "DTT/SAPUI5/model/Models"
     // "sap/ui/model/resource/ResourceModel"
 ],
     /**
@@ -14,6 +14,9 @@ sap.ui.define([
         return Controller.extend("DTT.SAPUI5.controller.App", {
             onInit: function() {
                                 
+            },
+            onOpenDialogHeader: function () {
+                this.getOwnerComponent().openHelloDialog();            
             }
         });
     });
