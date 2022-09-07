@@ -5,18 +5,21 @@ xmlns:core="sap.ui.core">
     <Panel id="_IDGenPanel2" 
             headerText = "{i18n>helloPanel}" 
             class="sapUiResponsiveMargin" 
-            width="auto">
+            width="auto"
+            expandable="{device>/system/phone}"
+            expanded="{= !${device>/system/phone}}"
+            >
         <content>
             <Button id="_IDGenButton2" 
                     text="{i18n>helloDialogButton}" 
                     press=".onOpenDialog" 
-                    class="sapUiSmallMarginEnd" 
+                    class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop" 
                     icon="sap-icon://action">
             </Button>
             <Button id="_IDGenButton1" 
                     text="{i18n>showHelloButtonText}" 
                     press=".onShowHello" 
-                    class="sapUiSmallMarginEnd">
+                    class="sapUiSmallMarginEnd sapUiHideOnDesktop">
             </Button>
             <Input id="_IDGenInput1" value="{/recipient/name}"
                 valueLiveUpdate="true"

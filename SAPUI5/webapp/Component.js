@@ -32,6 +32,7 @@ sap.ui.define([
 
                 this._helloDialog = new HelloDialog(this.getRootControl());
                 this.getRouter().initialize();
+                this.setModel(Models.createDeviceModel(), "device");
             },
             exit:function() {
                 this._helloDialog.destroy();
